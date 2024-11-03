@@ -6,14 +6,7 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  Text,
-  View,
-} from 'react-native';
-import AllRouter from './components/allRouter/AllRouter';
+import AllRouter from './components/AllRouter/AllRouter';
 import { NavigationContainer } from '@react-navigation/native';
 
 function App(): React.JSX.Element {

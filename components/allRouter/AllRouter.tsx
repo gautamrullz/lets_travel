@@ -1,15 +1,17 @@
 import React from 'react'
-import { Animated, Text, View } from 'react-native'
 import { createStackNavigator } from '@react-navigation/stack';
-import Landing from '../landing/Landing';
-import Login from '../login/Login';
-import Register from '../register/Register';
+import Landing from '../screens/landing/Landing';
+import Login from '../screens/login/LoginScreen';
+import RegisterScreen from '../screens/register/RegisterScreen';
 
 const AllRouter = (): React.JSX.Element => {
     const Stack = createStackNavigator();
     return (
-        <Stack.Navigator>
-            <Stack.Screen name="lets travel"
+        <Stack.Navigator initialRouteName="StartScreen"
+            screenOptions={{
+                headerShown: false,
+            }}>
+            <Stack.Screen name="StartScreen"
                 options={
                     {
                         headerStyle: {
@@ -20,11 +22,11 @@ const AllRouter = (): React.JSX.Element => {
                         },
                         headerTintColor: '#fff',
                         headerTitleAlign: 'center',
-                        // headerShown: false
+                        headerShown: false
                     }
                 } component={Landing} />
-            <Stack.Screen name="Login" component={Login} />
-            <Stack.Screen name="Register" component={Register} />
+            <Stack.Screen name="LoginScreen" component={Login} />
+            <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
             {/* <Stack.Screen name="location" component={Location} /> */}
             {/* <Stack.Screen name="booking" component={Booking} /> */}
         </Stack.Navigator>
