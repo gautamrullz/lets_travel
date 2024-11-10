@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Landing from '../screens/landing/Landing';
 import Login from '../screens/login/LoginScreen';
 import RegisterScreen from '../screens/register/RegisterScreen';
+import Dashboard from '../screens/dashboard/Dashboard';
 
 const AllRouter = (): React.JSX.Element => {
     const Stack = createStackNavigator();
@@ -27,6 +28,7 @@ const AllRouter = (): React.JSX.Element => {
                 } component={Landing} />
             <Stack.Screen name="LoginScreen" component={Login} />
             <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
+            <Stack.Screen name="Dashboard" component={Dashboard} />
             {/* <Stack.Screen name="location" component={Location} /> */}
             {/* <Stack.Screen name="booking" component={Booking} /> */}
         </Stack.Navigator>
